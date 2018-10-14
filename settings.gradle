@@ -1,0 +1,6 @@
+rootProject.name = 'study-gradle'
+//引入子模块，类似maven中父pom中的module来引入子模块,一次性编译
+include 'study-gradle-api'
+include 'study-gradle-core'
+include 'study-gradle-web'
+

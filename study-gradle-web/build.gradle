@@ -1,0 +1,19 @@
+//各个子模块的的gradle,类似maven中各个子模块的pom,各自的gradle有自己的plugins,dependcies
+plugins {
+    id 'java'
+}
+
+group 'com.rao.study.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+    compile project(":study-gradle-core")
+}
+
+

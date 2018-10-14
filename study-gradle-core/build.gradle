@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+group 'com.rao.study.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+dependencies{
+    //依然内部其他模块,一定要使用project(),且模块名称前使用:
+    compile project(":study-gradle-api")
+}

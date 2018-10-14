@@ -1,0 +1,33 @@
+//父目录下的gradle，就类似于maven项目下的父pom文件
+
+plugins {
+    id 'java'
+}
+
+group 'com.rao.study.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    //使用私服
+//    maven {url ""}
+    mavenCentral()
+}
+
+//定义子模块公共的内容
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        //使用私服
+//    maven {url ""}
+        mavenCentral()
+    }
+
+    dependencies {
+        compile group: 'org.springframework',name: 'spring-context',version: '4.3.18.RELEASE'
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
